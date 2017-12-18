@@ -11,15 +11,15 @@ contract AdminManager is Ownable {
     mapping(address => Admin) adminMap;
     uint adminIncrement = 0;
 
-    function Admin() public {
+    function AdminManager() public {
         addAdministrator(msg.sender);
     }
 
     function addAdministrator(address newAdmin) public onlyOwner {
-        adminMap++; // maybe use safeMath?
+        adminMap[newAdmin] = Admin(++adminIncrement); // maybe use safeMath?
     }
 
-    function isAdmin(uint id) public view returns (bool) {
-        return adminMap[id] != 0;
+    function isAdmin(address entity) public view returns (bool) {
+        return adminMap[entity].id != 0;
     }
 }
