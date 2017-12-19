@@ -12,7 +12,19 @@ contract ProductManager is Ownable {
         bool reachedDestination;
     }
 
+    mapping(uint => Product) productMapping;
+    uint index;
+
+    modifier onlyProducer {
+        require(ProducerManager(someAdress).isProducer(msg.sender));
+        _;
+    }
+
     function ProductManager() public {
+    }
+
+    function registerProduct(uint id, bytes32 name) public onlyProducer {
+        // Add a product to the product mapping
     }
 
 }
