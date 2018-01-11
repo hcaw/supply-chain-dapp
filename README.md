@@ -41,4 +41,4 @@ When a consumer wants to check the authenticity of a product, they can access th
 ## Why use the blockchain?
 
 Supply chain data suffers from fragmentation of storage with limited access rights.
-Storing provenance data in a blockchain such as ethereum allows for immutable, persistent and permissioned storage.
+Storing provenance data in a blockchain such as ethereum allows for immutable, persistent and permissioned storage of data that can be certified by trusted bodies.
